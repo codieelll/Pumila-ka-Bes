@@ -29,14 +29,7 @@ class Queue {
             rear = NULL;
         }
 
-        /*void insertCustomer (CustomerDetails customer);
-        void searchCustomer (CustomerDetails customer);
-        void editCustomer (CustomerDetails customer);
-        void removeCustomer (CustomerDetails customer);
-
-        i think, redundant
-        
-        */
+        //CRUD deleted
 
         void enqueue(CustomerDetails queue);
         void dequeue(CustomerDetails queue);

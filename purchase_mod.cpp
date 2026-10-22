@@ -4,6 +4,10 @@
 
 using namespace std;
 
+/*
+    Align input to the 3 options in main menu().
+*/
+
 void customerInput (CustomerDetails input) {
     cout << "\nLagay imong ngalan: ";
     getline(cin, input.name);
@@ -20,9 +24,12 @@ void customerInput (CustomerDetails input) {
         cout << "\nInvalid Input.\n";
     }
 
+    CustomerDetails.saveData(input);
+
     return input;
 }
 
+// can be an "if" condition (potentially) because i wanna call this after verifying that the customer is 18 above (solely on that reason)
 void productInput (CustomerDetails prod) {
     cout << "\nMay store card po? "; //will include in the recommendations: if yes, count points : if no, return
     getch();
@@ -30,6 +37,8 @@ void productInput (CustomerDetails prod) {
     cin >> prod.amount;
 
     cout << "\nPaid successfully!";
+
+        CustomerDetails.saveData(prod);
 
     return prod;
 }
